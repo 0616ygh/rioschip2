@@ -1,0 +1,548 @@
+library (sky130_sram_1kbyte_1rw1r_32x256_8) {
+  comment                        : "";
+  delay_model                    : table_lookup;
+  simulation                     : false;
+  capacitive_load_unit (1,pF);
+  leakage_power_unit             : 1pW;
+  current_unit                   : "1A";
+  pulling_resistance_unit        : "1ohm";
+  time_unit                      : "1ns";
+  voltage_unit                   : "1v";
+  library_features(report_delay_calculation);
+
+  input_threshold_pct_rise : 50;
+  input_threshold_pct_fall : 50;
+  output_threshold_pct_rise : 50;
+  output_threshold_pct_fall : 50;
+  slew_lower_threshold_pct_rise : 30;
+  slew_lower_threshold_pct_fall : 30;
+  slew_upper_threshold_pct_rise : 70;
+  slew_upper_threshold_pct_fall : 70;
+  slew_derate_from_library : 1.0;
+
+
+  nom_process                    : 1.0;
+  nom_temperature                : 25.0;
+  nom_voltage                    : 3.30;
+
+  type ("addr0") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 2;
+    bit_from : 1;
+    bit_to : 0;
+  }
+  type ("addr1") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 2;
+    bit_from : 1;
+    bit_to : 0;
+  }
+  type ("din0") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 32;
+    bit_from : 31;
+    bit_to : 0;
+  }
+  type ("dout0") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 32;
+    bit_from : 31;
+    bit_to : 0;
+  }
+  type ("dout1") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 32;
+    bit_from : 31;
+    bit_to : 0;
+  }
+  type ("wmask0") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 4;
+    bit_from : 3;
+    bit_to : 0;
+  }
+
+  cell ("sky130_sram_1kbyte_1rw1r_32x256_8") {
+    pin("clk0") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("clk1") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("csb0") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("csb1") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("web0") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("vdd") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("vss") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    bus("addr0") {
+      bus_type : addr0;
+      direction : input;
+      capacitance : 0.0000;
+    pin("addr0[1]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("addr0[0]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    }
+    bus("addr1") {
+      bus_type : addr1;
+      direction : input;
+      capacitance : 0.0000;
+    pin("addr1[1]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("addr1[0]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    }
+    bus("din0") {
+      bus_type : din0;
+      direction : input;
+      capacitance : 0.0000;
+    pin("din0[31]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[30]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[29]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[28]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[27]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[26]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[25]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[24]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[23]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[22]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[21]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[20]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[19]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[18]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[17]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[16]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[15]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[14]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[13]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[12]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[11]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[10]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[9]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[8]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[7]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[6]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[5]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[4]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[3]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[2]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[1]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("din0[0]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    }
+    bus("dout0") {
+      bus_type : dout0;
+      direction : output;
+      capacitance : 0.0000;
+    pin("dout0[31]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[30]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[29]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[28]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[27]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[26]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[25]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[24]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[23]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[22]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[21]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[20]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[19]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[18]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[17]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[16]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[15]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[14]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[13]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[12]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[11]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[10]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[9]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[8]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[7]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[6]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[5]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[4]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[3]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[2]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[1]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout0[0]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    }
+    bus("dout1") {
+      bus_type : dout1;
+      direction : output;
+      capacitance : 0.0000;
+    pin("dout1[31]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[30]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[29]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[28]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[27]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[26]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[25]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[24]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[23]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[22]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[21]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[20]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[19]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[18]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[17]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[16]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[15]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[14]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[13]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[12]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[11]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[10]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[9]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[8]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[7]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[6]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[5]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[4]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[3]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[2]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[1]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    pin("dout1[0]") {
+      direction : output;
+      capacitance : 0.0729;
+    }
+    }
+    bus("wmask0") {
+      bus_type : wmask0;
+      direction : input;
+      capacitance : 0.0000;
+    pin("wmask0[3]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("wmask0[2]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("wmask0[1]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("wmask0[0]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    }
+  }
+
+}
