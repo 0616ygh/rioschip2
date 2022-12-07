@@ -28,13 +28,14 @@
  *
  *-------------------------------------------------------------
  */
+
 module user_project_wrapper #(
     parameter BITS = 32
 )(
-    `ifdef USE_POWER_PINS
-        inout vdd,		// User area 5.0V supply
-        inout vss,		// User area ground
-    `endif
+`ifdef USE_POWER_PINS
+    inout vdd,		// User area 5.0V supply
+    inout vss,		// User area ground
+`endif
 
     // Wishbone Slave ports (WB MI A)
     input wb_clk_i,
@@ -67,8 +68,8 @@ module user_project_wrapper #(
 
 greenrio greenrio1 (
     `ifdef USE_POWER_PINS
-            .VDD(vdd),  // User area 1 1.8V power
-            .VSS(vss),  // User area 1 digital ground
+        inout vdd,		// User area 5.0V supply
+        inout vss,		// User area ground
     `endif
     .wb_clk_i(wb_clk_i),
     .wb_rst_i(wb_rst_i),

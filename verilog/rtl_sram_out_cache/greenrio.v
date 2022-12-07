@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2022 RIOS Lab
+// SPDX-FileCopyrightText: 2020 Efabless Corporation
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -36,8 +36,8 @@ module greenrio #(
     parameter BITS = 32
 )(
     `ifdef USE_POWER_PINS
-        inout VDD,		// User area 5.0V supply
-        inout VSS,		// User area ground
+        inout vdd,		// User area 5.0V supply
+        inout vss,		// User area ground
     `endif
 
     // Wishbone Slave ports (WB MI A)
